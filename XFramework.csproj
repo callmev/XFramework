@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE119CCE-A5CC-4B6A-B673-109A2B61C1D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XFramework</RootNamespace>
+    <AssemblyName>XFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FodyDependencyInjection">
+      <HintPath>..\..\Library\FodyDependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PGK.Extensions">
+      <HintPath>..\..\Library\PGK.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.4.3.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RabbitMQ.Client.3.4.3\lib\net35\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Api.Postman, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Api.Postman.1.0.4.0\lib\net35\ServiceStack.Api.Postman.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Api.Swagger, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Api.Swagger.3.9.71\lib\net35\ServiceStack.Api.Swagger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite, Version=3.9.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.OrmLite.SqlServer.3.9.14\lib\ServiceStack.OrmLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.SqlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.OrmLite.SqlServer.3.9.14\lib\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.ServiceInterface, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\GlobalConfig.cs" />
+    <Compile Include="Base\XFrameworkHelper.cs" />
+    <Compile Include="Common\Cache\CacheManager.cs" />
+    <Compile Include="Base\XFrameworkInjectModule.cs" />
+    <Compile Include="Common\Cache\CacheProvider.cs" />
+    <Compile Include="Common\Cache\ICache.cs" />
+    <Compile Include="Common\Cache\RedisProvider.cs" />
+    <Compile Include="Common\Cache\RedisClientManager.cs" />
+    <Compile Include="Common\RabbitMQ\IMqManager.cs" />
+    <Compile Include="Common\RabbitMQ\IMqReceiver.cs" />
+    <Compile Include="Common\RabbitMQ\IMqSender.cs" />
+    <Compile Include="Common\RabbitMQ\MqConfig.cs" />
+    <Compile Include="Common\RabbitMQ\Implement\MqManager.cs" />
+    <Compile Include="Common\RabbitMQ\Implement\MqReceiver.cs" />
+    <Compile Include="Common\RabbitMQ\Implement\MqSender.cs" />
+    <Compile Include="Common\Security\Cryptography\DESCryptography.cs" />
+    <Compile Include="Common\Security\Cryptography\MD5Cryptography.cs" />
+    <Compile Include="DDD\Domain\AggregateRoot.cs" />
+    <Compile Include="DDD\Domain\Command.cs" />
+    <Compile Include="DDD\Domain\IAggregateRoot.cs" />
+    <Compile Include="DDD\Domain\ICommand.cs" />
+    <Compile Include="DDD\Domain\ObjectId.cs" />
+    <Compile Include="DDD\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="DDD\UnitOfWork\IUnitOfWorkRepository.cs" />
+    <Compile Include="DDD\UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="Db\PetaPoco\Models\PetaPoco.cs" />
+    <Compile Include="Utilities\AppSettingHelper.cs" />
+    <Compile Include="Utilities\AutoMapperHelper.cs" />
+    <Compile Include="Utilities\DateTimeHelper.cs" />
+    <Compile Include="Utilities\EncryptHelper.cs" />
+    <Compile Include="Utilities\IpHelper.cs" />
+    <Compile Include="Web\Api\ApiHeader.cs" />
+    <Compile Include="Web\Api\ApiLog.cs" />
+    <Compile Include="Web\Auth\AuthFilter.cs" />
+    <Compile Include="Web\Auth\SessionManager.cs" />
+    <Compile Include="Web\Auth\CacheSessionManager.cs" />
+    <Compile Include="Web\Auth\XUserSession.cs" />
+    <Compile Include="Web\Host\AppHostConfiger.cs" />
+    <Compile Include="Web\ExceptionHandler.cs" />
+    <Compile Include="Web\Host\PluginLoader.cs" />
+    <Compile Include="Web\Host\XAppHostBase.cs" />
+    <Compile Include="Common\Ioc\FodyInjectAttribute.cs" />
+    <Compile Include="Common\Ioc\PropertyInjectionHeuristic.cs" />
+    <Compile Include="Common\Ioc\XKernel.cs" />
+    <Compile Include="Common\Ioc\NinjectIocAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\Api\ApiEntrance.cs" />
+    <Compile Include="Web\Api\ApiRequest.cs" />
+    <Compile Include="Web\Api\ApiResponse.cs" />
+    <Compile Include="Web\Auth\SessionFactory.cs" />
+    <Compile Include="Web\Auth\ServiceStackSessionManager.cs" />
+    <Compile Include="Web\Auth\SessionDto.cs" />
+    <Compile Include="Web\Auth\UserState.cs" />
+    <Compile Include="Web\CookieManager.cs" />
+    <Compile Include="Utilities\FileHelper.cs" />
+    <Compile Include="Utilities\JsonHelper.cs" />
+    <Compile Include="Utilities\RsaHelper.cs" />
+    <Compile Include="Utilities\XmlHelper.cs" />
+    <Compile Include="Web\Resource\GetToken\GetTokenResult.cs" />
+    <Compile Include="Web\Resource\GetToken\GetTokenValidator.cs" />
+    <Compile Include="Web\Resource\GetToken\GetTokenEntrance.cs" />
+    <Compile Include="Web\Resource\GetToken\GetTokenBody.cs" />
+    <Compile Include="Web\Resource\GetToken\GetTokenRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web\Resource\RefreshToken\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
