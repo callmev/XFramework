@@ -1,0 +1,120 @@
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\XFramework.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\XFramework.pdb
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\AutoMapper.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\FodyDependencyInjection.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\log4net.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\Newtonsoft.Json.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\Ninject.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\PGK.Extensions.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\RabbitMQ.Client.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Api.Postman.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Api.Swagger.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Common.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Interfaces.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.OrmLite.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Redis.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.ServiceInterface.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Text.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\AutoMapper.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\log4net.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\Newtonsoft.Json.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\Ninject.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\RabbitMQ.Client.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Common.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Interfaces.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.OrmLite.pdb
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.OrmLite.SqlServer.pdb
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Redis.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\bin\Debug\ServiceStack.Text.xml
+D:\Git\XTarget\src\01 Infrastructure\XFramework\obj\Debug\XFramework.dll
+D:\Git\XTarget\src\01 Infrastructure\XFramework\obj\Debug\XFramework.pdb
+D:\Git\XTarget\src\01 Infrastructure\XFramework\obj\Debug\XFramework.csprojResolveAssemblyReference.cache
+D:\Git\XFramework\bin\Debug\XFramework.dll
+D:\Git\XFramework\bin\Debug\XFramework.pdb
+D:\Git\XFramework\obj\Debug\XFramework.dll
+D:\Git\XFramework\obj\Debug\XFramework.pdb
+D:\Git\XFramework\bin\Debug\log4net.dll
+D:\Git\XFramework\bin\Debug\log4net.xml
+D:\Git\XFramework\bin\Debug\Common.Logging.Core.dll
+D:\Git\XFramework\bin\Debug\Common.Logging.dll
+D:\Git\XFramework\bin\Debug\Quartz.dll
+D:\Git\XFramework\bin\Debug\Topshelf.dll
+D:\Git\XFramework\bin\Debug\Common.Logging.pdb
+D:\Git\XFramework\bin\Debug\Common.Logging.xml
+D:\Git\XFramework\bin\Debug\Common.Logging.Core.pdb
+D:\Git\XFramework\bin\Debug\Common.Logging.Core.xml
+D:\Git\XFramework\bin\Debug\Quartz.pdb
+D:\Git\XFramework\bin\Debug\Quartz.xml
+D:\Git\XFramework\bin\Debug\FodyDependencyInjection.dll
+D:\Git\XFramework\bin\Debug\PGK.Extensions.dll
+D:\Git\XFramework\bin\Debug\AutoMapper.dll
+D:\Git\XFramework\bin\Debug\Newtonsoft.Json.dll
+D:\Git\XFramework\bin\Debug\Ninject.dll
+D:\Git\XFramework\bin\Debug\RabbitMQ.Client.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.Api.Postman.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.Api.Swagger.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.Common.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.Interfaces.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.OrmLite.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.Redis.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.ServiceInterface.dll
+D:\Git\XFramework\bin\Debug\ServiceStack.Text.dll
+D:\Git\XFramework\bin\Debug\AutoMapper.xml
+D:\Git\XFramework\bin\Debug\Newtonsoft.Json.xml
+D:\Git\XFramework\bin\Debug\Ninject.xml
+D:\Git\XFramework\bin\Debug\RabbitMQ.Client.xml
+D:\Git\XFramework\bin\Debug\ServiceStack.xml
+D:\Git\XFramework\bin\Debug\ServiceStack.Common.xml
+D:\Git\XFramework\bin\Debug\ServiceStack.Interfaces.xml
+D:\Git\XFramework\bin\Debug\ServiceStack.OrmLite.pdb
+D:\Git\XFramework\bin\Debug\ServiceStack.OrmLite.SqlServer.pdb
+D:\Git\XFramework\bin\Debug\ServiceStack.Redis.xml
+D:\Git\XFramework\bin\Debug\ServiceStack.Text.xml
+D:\Git\XFramework\XFramework\bin\Debug\XFramework.dll
+D:\Git\XFramework\XFramework\bin\Debug\XFramework.pdb
+D:\Git\XFramework\XFramework\bin\Debug\FodyDependencyInjection.dll
+D:\Git\XFramework\XFramework\bin\Debug\PGK.Extensions.dll
+D:\Git\XFramework\XFramework\bin\Debug\AutoMapper.xml
+D:\Git\XFramework\XFramework\bin\Debug\Common.Logging.pdb
+D:\Git\XFramework\XFramework\bin\Debug\Common.Logging.xml
+D:\Git\XFramework\XFramework\bin\Debug\Common.Logging.Core.pdb
+D:\Git\XFramework\XFramework\bin\Debug\Common.Logging.Core.xml
+D:\Git\XFramework\XFramework\bin\Debug\log4net.xml
+D:\Git\XFramework\XFramework\bin\Debug\Newtonsoft.Json.xml
+D:\Git\XFramework\XFramework\bin\Debug\Ninject.xml
+D:\Git\XFramework\XFramework\bin\Debug\Quartz.pdb
+D:\Git\XFramework\XFramework\bin\Debug\Quartz.xml
+D:\Git\XFramework\XFramework\bin\Debug\RabbitMQ.Client.xml
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.xml
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Common.xml
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Interfaces.xml
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.OrmLite.pdb
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.OrmLite.SqlServer.pdb
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Redis.xml
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Text.xml
+D:\Git\XFramework\XFramework\obj\Debug\XFramework.dll
+D:\Git\XFramework\XFramework\obj\Debug\XFramework.pdb
+D:\Git\XFramework\XFramework\bin\Debug\AutoMapper.dll
+D:\Git\XFramework\XFramework\bin\Debug\Common.Logging.Core.dll
+D:\Git\XFramework\XFramework\bin\Debug\Common.Logging.dll
+D:\Git\XFramework\XFramework\bin\Debug\log4net.dll
+D:\Git\XFramework\XFramework\bin\Debug\Newtonsoft.Json.dll
+D:\Git\XFramework\XFramework\bin\Debug\Ninject.dll
+D:\Git\XFramework\XFramework\bin\Debug\Quartz.dll
+D:\Git\XFramework\XFramework\bin\Debug\RabbitMQ.Client.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Api.Postman.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Api.Swagger.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Common.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Interfaces.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.OrmLite.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Redis.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.ServiceInterface.dll
+D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Text.dll
+D:\Git\XFramework\XFramework\bin\Debug\Topshelf.dll
