@@ -18,5 +18,10 @@ namespace XFramework.Common.Ioc
 
             return Kernel;
         }
+
+        public static T Get<T>()
+        {
+            return Kernel.Get<T>();
+        }
     }
 }
