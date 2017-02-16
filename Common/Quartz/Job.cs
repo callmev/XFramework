@@ -25,6 +25,9 @@ namespace XFramework.Common.Quartz
         /// <param name="jobName"></param>
         public Job(string jobName)
         {
+            if (string.IsNullOrEmpty(jobName))
+                throw new ArgumentNullException("jobName is null");
+
             Detail = JobBuilder.Create<T>()
                 .WithIdentity(jobName)
                 .Build();
@@ -46,6 +49,12 @@ namespace XFramework.Common.Quartz
 
         public Job(string jobName, string jobDesc, string workTime)
         {
+            if (string.IsNullOrEmpty(jobName))
+                throw new ArgumentNullException("jobName is null");
+
+            if (string.IsNullOrEmpty(workTime))
+                throw new ArgumentNullException("workTime is null");
+
             //创建一个作业
             Detail = JobBuilder.Create<T>()
               .WithIdentity(jobName)
