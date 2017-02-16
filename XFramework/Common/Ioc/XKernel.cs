@@ -23,5 +23,10 @@ namespace XFramework.Common.Ioc
         {
             return Kernel.Get<T>();
         }
+
+        public static T Get<T>(string name)
+        {
+            return Kernel.Get<T>(name);
+        }
     }
 }
