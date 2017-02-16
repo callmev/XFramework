@@ -7,13 +7,13 @@ namespace XFramework.Common.Quartz
     {
         public IJobDetail Detail { get; set; }
 
-        public ICronTrigger Trigger { get; set; }
+        public ITrigger Trigger { get; set; }
 
         public Job()
         {
         }
 
-        public Job(IJobDetail detail, ICronTrigger trigger)
+        public Job(IJobDetail detail, ITrigger trigger)
         {
             Detail = detail;
             Trigger = trigger;
@@ -32,15 +32,11 @@ namespace XFramework.Common.Quartz
                 .WithIdentity(jobName)
                 .Build();
 
-            Trigger = (ICronTrigger)TriggerBuilder.Create()
+            Trigger = TriggerBuilder.Create()
                 .WithIdentity(string.Format("{0}_Trigger", jobName))
-                .StartAt(new DateTimeOffset())
-                .WithSchedule(
-                    SimpleScheduleBuilder.Create()
-                        .WithIntervalInSeconds(3)
-                        //重复执行的次数，因为加入任务的时候马上执行了，所以不需要重复，否则会多一次。  
-                        .WithRepeatCount(0))
-                        .Build();
+                .StartNow()
+                .WithSimpleSchedule(x => x.WithIntervalInSeconds(3).WithRepeatCount(0))
+                .Build();
         }
 
         public Job(string jobName, string workTime) : this(jobName, jobName, workTime)
@@ -62,7 +58,7 @@ namespace XFramework.Common.Quartz
               .Build();
 
             //创建一个触发器
-            Trigger = (ICronTrigger)TriggerBuilder.Create()
+            Trigger = TriggerBuilder.Create()
                 .WithIdentity(string.Format("{0}_Trigger", jobName))
                 .WithCronSchedule(workTime)
                 .Build();
