@@ -118,3 +118,4 @@ D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Redis.dll
 D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.ServiceInterface.dll
 D:\Git\XFramework\XFramework\bin\Debug\ServiceStack.Text.dll
 D:\Git\XFramework\XFramework\bin\Debug\Topshelf.dll
+D:\Git\XFramework\XFramework\obj\Debug\XFramework.csprojResolveAssemblyReference.cache

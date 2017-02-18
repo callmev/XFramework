@@ -29,7 +29,7 @@ namespace XFramework.Common.RabbitMQ.Implement
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.ExchangeDeclare(_config.Exchange, ExchangeType.Direct);
+                    channel.ExchangeDeclare(_config.Exchange, ExchangeType.Direct, true);
                     channel.QueueDeclare(_config.QueueName, true, false, false, null);
                     channel.QueueBind(_config.QueueName, _config.Exchange, _config.RoutingKey);
 

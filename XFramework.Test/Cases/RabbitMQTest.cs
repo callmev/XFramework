@@ -13,14 +13,23 @@ namespace XFramework.Test.Cases
         //测试使用192.168.4.220服务器消息队列，应确保该服务正常，并且运行测试的机器与服务器通信正常
         private readonly MqConfig _integratedTestMqConfig = new MqConfig
         {
-            Host = "127.0.0.1",
+            //Host = "127.0.0.1",
+            //Port = 5672,
+            //Exchange = "exchange_xframework_test",
+            //QueueName = "queuename_xframework_test",
+            //RoutingKey = "routingkey_xframework_test",
+            //HeartBeat = 30,
+            //UserName = "angel",
+            //Password = "qiang"
+            Host = "192.168.4.171",
             Port = 5672,
-            Exchange = "exchange_xframework_test",
-            QueueName = "queuename_xframework_test",
-            RoutingKey = "routingkey_xframework_test",
+            Exchange = "UDC",
+            QueueName = "cs.udc.receivemessage",
+            RoutingKey = "cs.udc.receivemessage",
             HeartBeat = 30,
-            UserName = "angel",
-            Password = "qiang"
+            UserName = "admin",
+            Password = "admin"
+
         };
 
         private readonly Collection<string> _receivedMessage = new Collection<string>();
