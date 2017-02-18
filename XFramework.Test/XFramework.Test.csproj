@@ -74,6 +74,7 @@
     <Compile Include="Base\TestAssemblyInit.cs" />
     <Compile Include="Base\TestBase.cs" />
     <Compile Include="Base\TestInjectModule.cs" />
+    <Compile Include="Cases\AutoMapperTest .cs" />
     <Compile Include="Cases\JobTest.cs" />
     <Compile Include="Cases\RabbitMQTest.cs" />
     <Compile Include="Cases\RedisTest .cs" />
