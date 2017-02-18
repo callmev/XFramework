@@ -1,9 +1,11 @@
-﻿namespace XFramework.Common.Quartz
+﻿using Quartz;
+
+namespace XFramework.Common.Quartz
 {
     /// <summary>
     /// Service interface for core Quartz.NET server.
     /// </summary>
-    internal interface IQuartzServer
+    public interface IQuartzServer
     {
         /// <summary>
         /// Initializes the instance of <see cref="IQuartzServer"/>.
