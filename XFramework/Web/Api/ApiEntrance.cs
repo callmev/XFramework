@@ -1,18 +1,22 @@
 ﻿using System;
+using System.Diagnostics;
 using log4net;
 using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface;
-using XFramework.Base;
+using XFramework.Common.Ioc;
 using XFramework.Utilities;
+using XFramework.Web.ApiLog;
 using XFramework.Web.Auth;
 
 namespace XFramework.Web.Api
 {
     public class ApiEntrance<T> : RestServiceBase<T>
     {
-        //private ResponseResult<T> responseResult = null;
-        private ApiLog logInfo = new ApiLog();
-        ILog _logger = LogManager.GetLogger(typeof(ApiLog));
+        private ApiLog.ApiLog logInfo = new ApiLog.ApiLog();
+        private Stopwatch _stopWatch = new Stopwatch();
+        private ApiLogMode _logMode = ApiLogMode.Both;
+        private XUserSession _xUserSession;
+        ILog _logger = LogManager.GetLogger(typeof(ApiLog.ApiLog));
 
         public ApiEntrance()
         { }
@@ -21,53 +25,34 @@ namespace XFramework.Web.Api
 
         protected override void OnBeforeExecute(T businessRequest)
         {
-            if (businessRequest == null)
-                throw new ArgumentNullException(
-                    "OnBeforeExecute(T businessRequest) => businessRequest == null");
+            _stopWatch.Start();
+            _xUserSession = Auth.SessionFactory.Create<T>(this.Request, businessRequest).GetSession();
 
-            logInfo.Request = businessRequest;
+            this.ReadApiLogMode();
 
-            //this.CollectLogInfo(businessRequest);
-
-            //if (!this.ContainAuthFilterProperty())
-            //    return;
-
-            //Auth.Session.SessionFactory.Create<T>(this.Request, businessRequest).CheckUserSession();
+            this.StartLog(businessRequest);
         }
 
         protected override object OnAfterExecute(Object response)
         {
-            logInfo.Response = response;
+            var result = new ApiResponse(response);
 
-            SaveLogInfo(true);
-
-            //this.responseResult.Result = response;
-
-            //this.logCollector.SetResponseDataProperty(
-            //    new SerializeManager().SerializeToJson(this.responseResult));
-            //this.logCollector.SaveLog();
-
-            //return this.AppendCookieToResponseResult();
-
-
-
-            return new ApiResponse(response);
+            EndLog(result);
+            
+            return result;
         }
 
-        protected override object HandleException(IHttpRequest httpReq, T request, Exception exception)
+        protected override object HandleException(IHttpRequest httpReq, T request, Exception ex)
         {
-            //if (businessRequest == null)
-            //    throw new ArgumentNullException("OnBeforeExecute(T businessRequest) => request == null");
+            var message = string.Format("Api处理失败 => url:{0} request:{1}", logInfo.ApiUrl, logInfo.RequestData);
+            _logger.Error(message, ex);
 
-            //this.logCollector.SetExceptionDataProperty(ex);
-            //this.logCollector.SaveLog();
+            logInfo.Success = false;
+            logInfo.Exception = ex.Message;
 
-            //this.AppendCookieToResponseResult();
-            //return this.AppendErrorMessageToResponseResult(exception);
+            var response = new ApiResponse(ex);
 
-            var response = new ApiResponse(exception);
-            logInfo.Response = response;
-            SaveLogInfo(false);
+            EndLog(response);
 
             return response;
         }
@@ -76,66 +61,52 @@ namespace XFramework.Web.Api
 
         #region 私有方法
 
-        private void SaveLogInfo(bool isSuccess)
+        private void StartLog(T businessRequest)
         {
-            var jsonstr = JsonHelper.Serialize(logInfo);
-
-            if (isSuccess)
-            {
-                _logger.Info("request = >" + jsonstr);
-            }
-            else
-            {
-                _logger.Error("request = >" + jsonstr);
-            }
+            logInfo.ApiType = businessRequest.GetType().ToString();
+            //logInfo.ApiKey = string.Empty;
+            logInfo.ApiUrl = this.Request.RawUrl;
+            logInfo.RequestData = JsonHelper.Serialize(businessRequest);
+            logInfo.Success = true;
         }
 
-        private void CollectLogInfo(T businessRequest)
+        private void EndLog(ApiResponse response)
         {
-            logInfo.Request = businessRequest;
+            if (_logMode != ApiLogMode.Both)
+                return;
+
+            logInfo.ResponseData = JsonHelper.Serialize(response);
+
+            SaveLog();
+        }
+
+        private void SaveLog()
+        {
+            _stopWatch.Stop();
+            logInfo.RunTime = _stopWatch.ElapsedMilliseconds;
+
+            if (_xUserSession != null)
+            {
+                logInfo.CreateUser = _xUserSession.XUserInfo.AuthId;
+            }
             
-            //this.logCollector = new LogInfoCollector(
-            //    this.Request, SessionFactory.Create<T>(this.Request, businessRequest).GetRequestSession());
-
-            //// 需要优化 （有一个反序列化操作）
-            //logCollector.Collect(
-            //    businessRequest.GetType(),
-            //    new SerializeManager().SerializeToJson(businessRequest));
+            //日志记录
+            var apiLogPersistence = XKernel.Get<IApiLogPersistence>();
+            apiLogPersistence.Save(logInfo);
         }
 
-        private bool ContainAuthFilterProperty()
+        private void ReadApiLogMode()
         {
-            var authFilter = this.GetAttribute<Auth.Auth>();
-            return authFilter != null;
+            var apiLogAttr = this.GetAttribute<ApiLogAttribute>();
+            if (apiLogAttr != null)
+                _logMode = apiLogAttr.Mode;
         }
 
-        //private void BuildResponseResultObject(T businessRequest)
-        //{
-        //    this.responseResult = new ApiResponse();
-        //}
-
-        //private object AppendErrorMessageToResponseResult(Exception ex)
-        //{
-        //    if (ex != null)
-        //    {
-        //        this.responseResult.Success = false;
-        //        this.responseResult.Message = ex.Message;
-        //    }
-
-        //    return this.responseResult;
-        //}
-
-        //private object AppendCookieToResponseResult()
-        //{
-        //    //this.responseResult.Cookies = CookieManager.GetCookies(this.Response);
-
-        //    return this.responseResult;
-        //}
-
-
-        protected XUserSession GetXUserSession(string accessToken)
+        protected XUserSession GetXUserSession()
         {
-            return XFrameworkHelper.GetCacheProvider().Get<XUserSession>(accessToken);
+            return _xUserSession;
+
+            //return XFrameworkHelper.GetCacheProvider().Get<XUserSession>(accessToken);
         }
 
         #endregion
